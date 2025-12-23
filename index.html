@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tsunami Hamburgueria</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div class="header">
+  <img src="Tsunami-Hamburgueria.png" class="banner">
+</div>
+<div class="" style="background-color: #FD8200;">
+  <h3 class="container-sm" style="color: aliceblue;">Aberto das 18hrs as 23hrs</h3>
+</div>
+
+<div class="container mt-3">
+
+  <!-- Tradicionais -->
+   <a href="#tradicionais">
+     <button class="section-btn btn-trad" onclick="toggle('tradicionais')">Tradicionais</button>
+   </a>  
+<div id="tradicionais" style="display: none">
+  <div class="product">
+    <div class="fw-bold">X Burguer — R$ 14,00</div>
+    <small><!-- Descricao --></small><br>
+    <button class="mt-2 add add-effect" style="background: #FD8200;" onclick="add('x-burguer', 1)">Adicionar</button>
+    <button class="mt-2" onclick="removeItem('x-burguer', 1)">Remover</button>
+  </div>
+
+  <div class="product">
+    <div class="fw-bold">X Salada — R$ 17,00</div>
+    <small><!-- Descricao --></small><br>
+    <button class="mt-2" style="background: #FD8200;" onclick="add('x-salada')">Adicionar</button>
+    <button class="mt-2" onclick="removeItem('x-salada', 1)">Remover</button>
+  </div>
+
+  <div class="product">
+    <div class="fw-bold">X Frango — R$ 17,00</div>
+    <small><!-- Descricao --></small><br>
+    <button class="mt-2" style="background: #FD8200;" onclick="add('x-frango')">Adicionar</button>
+    <button class="mt-2" onclick="removeItem('x-frango', 1)">Remover</button>
+  </div>
+
+  <div class="product">
+    <div class="fw-bold">X Egg — R$ 18,00</div>
+    <small><!-- Descricao --></small><br>
+    <button class="mt-2" style="background: #FD8200;" onclick="add('x-egg')">Adicionar</button>
+    <button class="mt-2" onclick="removeItem('x-egg', 1)">Remover</button>
+  </div>
+
+  <div class="product">
+    <div class="fw-bold">X Bacon — R$ 19,00</div>
+    <small><!-- Descricao --></small><br>
+    <button class="mt-2" style="background: #FD8200;" onclick="add('x-bacon')">Adicionar</button>
+    <button class="mt-2" onclick="removeItem('x-bacon', 1)">Remover</button>
+  </div>
+
+  <div class="product">
+    <div class="fw-bold">X Bacon Egg — R$ 21,00</div>
+    <small><!-- Descricao --></small><br>
+    <button class="mt-2" style="background: #FD8200;" onclick="add('x-baconegg')">Adicionar</button>
+    <button class="mt-2" onclick="removeItem('x-baconegg', 1)">Remover</button>
+  </div>
+
+  <div class="product">
+    <div class="fw-bold">X Tudão — R$ 35,00</div>
+    <small><!-- Descricao --></small><br>
+    <button class="mt-2" style="background: #FD8200;" onclick="add('x-tudao')">Adicionar</button>
+    <button class="mt-2" onclick="removeItem('x-tudao', 1)">Remover</button>
+  </div>
+</div>
+
+<!-- Especiais -->
+<a href="#especiais">
+<button class="section-btn btn-esp" onclick="toggle('especiais')">Especiais</button>
+</a>
+<div id="especiais" style="display:none">
+  <div class="product">
+    <div class="fw-bold">Burguer R7 — R$ 20,00</div>
+    <small>Pão brioche, hambúrguer, maionese da casa, queijo prato, cebola caramelizada, alface e tomate</small><br>
+    <button class="mt-2" style="background: #FD8200;" onclick="add('burguer-r7')">Adicionar</button>
+    <button class="mt-2" onclick="removeItem('burguer-r7', 1)">Remover</button>
+  </div>
+
+  <div class="product">
+    <div class="fw-bold">Burguer R1 — R$ 23,00</div>
+    <small>Pão brioche, hambúrguer, maionese da casa, cebola roxa, queijo prato, picles, cebola crispy, alface e tomate</small><br>
+    <button class="mt-2" style="background: #FD8200;" onclick="add('burguer-r1')">Adicionar</button>
+    <button class="mt-2" onclick="removeItem('burguer-r1', 1)">Remover</button>
+  </div>
+
+  <div class="product">
+    <div class="fw-bold">BBQ Bacon — R$ 25,00</div>
+    <small>Pão brioche, hambúrguer, maionese da casa, bacon, cebola caramelizada, queijo prato, alface e tomate</small><br>
+    <button class="mt-2" style="background: #FD8200;" onclick="add('bbq-bacon')">Adicionar</button>
+    <button class="mt-2" onclick="removeItem('bbq-bacon', 1)">Remover</button>
+  </div>
+
+  <div class="product">
+    <div class="fw-bold">BM — R$ 27,00</div>
+    <small>Pão brioche, hambúrguer, maionese da casa, ovo, cebola roxa e catupiry original</small><br>
+    <button class="mt-2" style="background: #FD8200;" onclick="add('bm')">Adicionar</button>
+    <button class="mt-2" onclick="removeItem('bm', 1)">Remover</button>
+  </div>
+
+  <div class="product">
+    <div class="fw-bold">Abracadabra — R$ 28,00</div>
+    <small>Pão brioche, hambúrguer, maionese da casa, queijo cheddar, cheddar cremoso e doritos</small><br>
+    <button class="mt-2" style="background: #FD8200;" onclick="add('abracadabra')">Adicionar</button>
+    <button class="mt-2" onclick="removeItem('abracadabra', 1)">Remover</button>
+  </div>
+
+  <div class="product">
+    <div class="fw-bold">Black R1 — R$ 33,00</div>
+    <small>Pão black, maionese da casa, dois hambúrgueres, cheddar cremoso e farofa de bacon</small><br>
+    <button class="mt-2" style="background: #FD8200;" onclick="add('black-r1')">Adicionar</button>
+    <button class="mt-2" onclick="removeItem('black-r1', 1)">Remover</button>
+  </div>
+</div>
+
+<!-- Combos -->
+<a href="#combos">
+<button class="section-btn btn-comb" onclick="toggle('combos')">Combos</button>
+</a>
+<div id="combos" style="display:none">
+  <div class="product">
+    <div class="fw-bold">Combo Clássico — R$ 29,90</div>
+    <small>1 X-Salada + Fritas + Refri 350ml</small><br>
+    <button class="mt-2" style="background: #FD8200;" onclick="add('combo-classico')">Adicionar</button>
+    <button class="mt-2" onclick="removeItem('combo-classico', 1)">Remover</button>
+  </div>
+
+  <div class="product">
+    <div class="fw-bold">Combo R1 — R$ 34,90</div>
+    <small>1 Burguer R1 + Fritas + Refri 350ml</small><br>
+    <button class="mt-2" style="background: #FD8200;" onclick="add('combo-r1')">Adicionar</button>
+    <button class="mt-2" onclick="removeItem('combo-r1', 1)">Remover</button>
+  </div>
+
+  <div class="product">
+    <div class="fw-bold">Combo BBQ — R$ 44,90</div>
+    <small>1 BBQ + Fritas + Onion Rings + Refri 350ml</small><br>
+    <button class="mt-2" style="background: #FD8200;" onclick="add('combo-bbq')">Adicionar</button>
+    <button class="mt-2" onclick="removeItem('combo-bbq', 1)">Remover</button>
+  </div>
+
+  <div class="product">
+    <div class="fw-bold">Combo Kids — R$ 29,90</div>
+    <small>1 X-Burguer + Fritas + Coca 200ml + Brinquedo Surpresa</small><br>
+    <button class="mt-2" style="background: #FD8200;" onclick="add('combo-kids')">Adicionar</button>
+    <button class="mt-2" onclick="removeItem('combo-kids', 1)">Remover</button>
+  </div>
+</div>
+
+<!-- Salgados -->
+<a href="#salgados">
+<button class="section-btn btn-salg" onclick="toggle('salgados')">Salgados</button>
+</a>
+<div id="salgados" style="display:none">
+  <div class="product">
+    <div class="fw-bold">Coxinha — R$ 10,00</div>
+    <small><!-- Descrição --></small><br>
+    <button class="mt-2" style="background: #FD8200;" onclick="add('coxinha')">Adicionar</button>
+    <button class="mt-2" onclick="removeItem('coxinha', 1)">Remover</button>
+  </div>
+
+  <div class="product">
+    <div class="fw-bold">Maravilha — R$ 10,00</div>
+    <small><!-- Descrição --></small><br>
+    <button class="mt-2" style="background: #FD8200;" onclick="add('maravilha')">Adicionar</button>
+    <button class="mt-2" onclick="removeItem('maravilha', 1)">Remover</button>
+  </div>
+
+  <div class="product">
+    <div class="fw-bold">Porção Tamanho Festa — R$ 20,00</div>
+    <small>Pão brioche, hambúrguer artesanal, cheddar e bacon</small><br>
+    <button class="mt-2" style="background: #FD8200;" onclick="add('porcao-festa')">Adicionar</button>
+    <button class="mt-2" onclick="removeItem('porcao-festa', 1)">Remover</button>
+  </div>
+</div>
+
+<!-- Porções -->
+<a href="#porcoes">
+<button class="section-btn btn-porc" onclick="toggle('porcoes')">Porções</button>
+</a>
+<div id="porcoes" style="display:none">
+  <div class="product">
+    <div class="fw-bold">Batata Frita Simples P — R$ 10,00</div>
+    <small><!-- Descrição --></small><br>
+    <button class="mt-2" style="background: #FD8200;" onclick="add('bf-p')">Adicionar</button>
+    <button class="mt-2" onclick="removeItem('bf-p', 1)">Remover</button>
+  </div>
+
+  <div class="product">
+    <div class="fw-bold">Batata Frita Simples M — R$ 15,00</div>
+    <small><!-- Descrição --></small><br>
+    <button class="mt-2" style="background: #FD8200;" onclick="add('bf-m')">Adicionar</button>
+    <button class="mt-2" onclick="removeItem('bf-m', 1)">Remover</button>
+  </div>
+
+  <div class="product">
+    <div class="fw-bold">Batata Frita Simples G — R$ 25,00</div>
+    <small><!-- Descrição --></small><br>
+    <button class="mt-2" style="background: #FD8200;" onclick="add('bf-g')">Adicionar</button>
+    <button class="mt-2" onclick="removeItem('bf-g', 1)">Remover</button>
+  </div>
+
+  <div class="product">
+    <div class="fw-bold">Batata com Cheddar e Bacon P — R$ 20,00</div>
+    <small><!-- Descrição --></small><br>
+    <button class="mt-2" style="background: #FD8200;" onclick="add('bfcb-p')">Adicionar</button>
+    <button class="mt-2" onclick="removeItem('bfcb-p', 1)">Remover</button>
+  </div>
+
+  <div class="product">
+    <div class="fw-bold">Batata com Cheddar e Bacon M — R$ 25,00</div>
+    <small><!-- Descrição --></small><br>
+    <button class="mt-2" style="background: #FD8200;" onclick="add('bfcb-m')">Adicionar</button>
+    <button class="mt-2" onclick="removeItem('bfcb-m', 1)">Remover</button>
+  </div>
+
+  <div class="product">
+    <div class="fw-bold">Batata com Cheddar e Bacon G — R$ 36,00</div>
+    <small><!-- Descrição --></small><br>
+    <button class="mt-2" style="background: #FD8200;" onclick="add('bfcb-g')">Adicionar</button>
+    <button class="mt-2" onclick="removeItem('bfcb-g', 1)">Remover</button>
+  </div>
+</div>
+
+<!-- Pastéis -->
+<a href="#pasteis">
+<button class="section-btn btn-past" onclick="toggle('pasteis')">Pastéis</button>
+</a>
+<div id="pasteis" style="display:none">
+  <div class="product">
+    <div class="fw-bold">Pastel de Queijo — R$ 12,00</div>
+    <small><!-- Descrição --></small><br>
+    <button class="mt-2" style="background: #FD8200;" onclick="add('p-queijo')">Adicionar</button>
+    <button class="mt-2" onclick="removeItem('p-queijo', 1)">Remover</button>
+  </div>
+
+  <div class="product">
+    <div class="fw-bold">Pastel de Pizza — R$ 15,00</div>
+    <small><!-- Descrição --></small><br>
+    <button class="mt-2" style="background: #FD8200;" onclick="add('p-pizza')">Adicionar</button>
+    <button class="mt-2" onclick="removeItem('p-pizza', 1)">Remover</button>
+  </div>
+
+  <div class="product">
+    <div class="fw-bold">Pastel de Carne — R$ 17,00</div>
+    <small><!-- Descrição --></small><br>
+    <button class="mt-2" style="background: #FD8200;" onclick="add('p-carne')">Adicionar</button>
+    <button class="mt-2" onclick="removeItem('p-carne', 1)">Remover</button>
+  </div>
+
+  <div class="product">
+    <div class="fw-bold">Pastel Carne com Queijo — R$ 20,00</div>
+    <small><!-- Descrição --></small><br>
+    <button class="mt-2" style="background: #FD8200;" onclick="add('p-carne-queijo')">Adicionar</button>
+    <button class="mt-2" onclick="removeItem('p-carne-queijo', 1)">Remover</button>
+  </div>
+</div>
+
+<!-- Doces -->
+<a href="#doces">
+<button class="section-btn btn-doces" onclick="toggle('doces')">Doces</button>
+</a>
+<div id="doces" style="display:none">
+  <div class="product">
+    <div class="fw-bold">Pudim — R$ 7,00</div>
+    <small><!-- Descrição --></small><br>
+    <button class="mt-2" style="background: #FD8200;" onclick="add('pudim')">Adicionar</button>
+    <button class="mt-2" onclick="removeItem('pudim', 1)">Remover</button>
+  </div>
+
+  <div class="product">
+    <div class="fw-bold">Bolo Fatia — R$ 12,00</div>
+    <small><!-- Descrição --></small><br>
+    <button class="mt-2" style="background: #FD8200;" onclick="add('bolo-fatia')">Adicionar</button>
+    <button class="mt-2" onclick="removeItem('bolo-fatia', 1)">Remover</button>
+  </div>
+
+  <div class="product">
+    <div class="fw-bold">Tortinha — R$ 7,00</div>
+    <small><!-- Descrição --></small><br>
+    <button class="mt-2" style="background: #FD8200;" onclick="add('tortinha')">Adicionar</button>
+    <button class="mt-2" onclick="removeItem('tortinha', 1)">Remover</button>
+  </div>
+
+  <div class="product">
+    <div class="fw-bold">Copo da Felicidade — R$ 12,00</div>
+    <small><!-- Descrição --></small><br>
+    <button class="mt-2" style="background: #FD8200;" onclick="add('copo-felicidade')">Adicionar</button>
+    <button class="mt-2" onclick="removeItem('copo-felicidade', 1)">Remover</button>
+  </div>
+</div>
+
+</div>
+
+<div class="container py-3 bg-white border-top shadow-sm fixed-bottom">
+  <div class="d-flex align-items-center justify-content-between">
+    <div>
+      <p class="mb-0 text-muted small">Total sem a entrega</p>
+      <h5 id="total" class="mb-0 fw-bold total">R$ 00,00 </h5>
+    </div>
+    
+    <button id="cartBtn" class="cart-float" data-bs-toggle="modal" data-bs-target="#cartModal">
+    Ver Carrinho <span id="cartCount" class="cart-badge">0</span>
+    </button>
+  </div>
+</div>
+
+<!-- <div class="card-body">
+  <div>
+  <span class="">total sem taxa de entrega</span>
+  </div>
+<button id="cartBtn" class="cart-float" data-bs-toggle="modal" data-bs-target="#cartModal">
+🛒 Carrinho <span id="cartCount" class="cart-badge">0</span>
+</button>
+</div> -->
+
+<div class="modal fade" id="cartModal">
+<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+<div class="modal-content">
+<div class="modal-header">
+<h5>🛒 Carrinho</h5>
+<button class="btn-close" data-bs-dismiss="modal"></button>
+</div>
+
+<div class="modal-body">
+
+<ul id="cartItems" class="list-group mb-3"></ul>
+
+<div class="fw-bold fs-5">
+Total: <span class="total" id="total1">R$ 0,00</span>
+</div>
+
+</div>
+
+<div class="modal-footer">
+<button class="btn btn-success w-100" data-bs-toggle="modal" data-bs-target="#finalizarPedido">Finalizar Compra</button>
+</div>
+
+</div>
+</div>
+</div>
+
+<div class="modal fade" id="finalizarPedido">
+<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+<div class="modal-content">
+
+<div class="modal-header">
+<h5>👤 Dados do Cliente</h5>
+<button class="btn-close" data-bs-dismiss="modal"></button>
+</div>
+
+<div class="modal-body">
+
+<ul id="cartItems" class="list-group mb-3"></ul>
+
+<select id="bairro" class="form-select mb-2" onchange="render()">
+<option value="">Selecione o bairro</option>
+<option value="4">Caiubura 1 — R$ 4,00</option>
+<option value="5">Caiubura 2 — R$ 5,00</option>
+<option value="7">Caiubura lado Sabesp — R$ 7,00</option>
+<option value="6">Caruara — R$ 6,00</option>
+<option value="10">Iriri — R$ 10,00</option>
+<option value="10">Sítio São João — R$ 10,00</option>
+<option value="15">Jardim Vicente de Carvalho — R$ 15,00</option>
+<option value="15">Centro — R$ 15,00</option>
+</select>
+
+<form id="orderForm" novalidate>
+<input id="nome" class="form-control mb-2" placeholder="Nome" required>
+<div class="invalid-feedback">Informe seu nome</div>
+<input id="telefone" class="form-control mb-2" placeholder="Telefone" required>
+<div class="invalid-feedback">Informe seu telefone</div>
+<input id="endereco" class="form-control mb-2" placeholder="Endereço" required>
+<div class="invalid-feedback">Informe seu endereço</div>
+<input id="referencia" class="form-control mb-2" placeholder="Ponto de referência (opcional)">
+</form>
+
+<select id="pagamento" class="form-select mb-2" onchange="toggleTroco()" required>
+<option value="">Forma de pagamento</option>
+<option>Pix</option>
+<option>Cartão</option>
+<option>Dinheiro</option>
+</select>
+
+<input id="troco" class="form-control mb-2" placeholder="Troco para quanto?" style="display:none" required>
+
+<div class="fw-bold fs-5">
+Total: <span id="total2">R$ 0,00</span>
+</div>
+
+</div>
+
+<div class="modal-footer">
+<button class="btn btn-success w-100" onclick="send()">Enviar pelo WhatsApp</button>
+</div>
+
+</div>
+</div>
+</div>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<script src="script.js"></script>
+
+
+
+</body>
+</html>

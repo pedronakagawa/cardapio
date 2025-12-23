@@ -1,0 +1,133 @@
+:root{
+  --orange:#FD8200;
+  --dark:#1E1E1E;
+}
+
+body{
+  font-family:'Poppins',sans-serif;
+  background: #dadada;
+  padding-bottom:90px;
+}
+
+.header{
+  background:var(--dark);
+}
+
+.banner{
+  width:100%;
+  height:180px;
+  object-fit:cover;
+}
+
+.section-btn{
+  background:var(--orange);
+  border:none;
+  width:100%;
+  height: 100px;
+  padding:15px;
+  font-weight:600;
+  text-align:left;
+  border-radius:6px;
+  margin-top:14px;
+  text-transform: uppercase;
+  font-size: 2rem;
+  color: #fff;
+}
+
+.product{
+  background:#fff;
+  border-radius:8px;
+  padding:12px;
+  margin-top:8px;
+  box-shadow:0 2px 6px rgba(0,0,0,.08);
+}
+
+.product button{
+  background:var(--dark);
+  color:#fff;
+  border:none;
+  padding:6px 14px;
+  border-radius:4px;
+}
+
+.cart-float{
+  position:fixed;
+  bottom:15px;
+  right:20px;
+  background:var(--orange);
+  border:none;
+  border-radius:50px;
+  padding:12px 18px;
+  font-weight:600;
+  z-index:1050;
+}
+
+.cart-badge{
+  background:#000;
+  color:#fff;
+  border-radius:50%;
+  padding:2px 8px;
+  font-size:12px;
+  margin-left:6px;
+}
+
+.btn-trad {
+    /* Propriedades da Imagem */
+    background: linear-gradient(rgba(0, 0, 0, 0.300), rgba(0, 0, 0, 0.300)), url('https://down-br.img.susercontent.com/file/br-11134207-7qukw-lhxbgspdxsvrf5');
+    background-size: cover;      /* Faz a imagem preencher todo o botão */
+    background-position: center; /* Centraliza a imagem */
+    background-repeat: no-repeat;
+}
+
+.btn-esp {
+    /* Propriedades da Imagem */
+    background: linear-gradient(rgba(0, 0, 0, 0.300), rgba(0, 0, 0, 0.300)), url('https://img77.uenicdn.com/image/upload/v1568110937/category/shutterstock_424917007.jpg');
+    background-size: cover;      /* Faz a imagem preencher todo o botão */
+    background-position: center; /* Centraliza a imagem */
+    background-repeat: no-repeat;
+}
+
+.btn-comb {
+    /* Propriedades da Imagem */
+    background: linear-gradient(rgba(0, 0, 0, 0.300), rgba(0, 0, 0, 0.300)), url('https://cdn.dooca.store/48161/posts/zgqmpqyuhcknbbmri3lrczlv6zmcvppicj0a.png?v=1692800420&webp=0');
+    background-size: cover;      /* Faz a imagem preencher todo o botão */
+    background-position: center; /* Centraliza a imagem */
+    background-repeat: no-repeat;
+}
+
+.btn-salg {
+    /* Propriedades da Imagem */
+    background: linear-gradient(rgba(0, 0, 0, 0.300), rgba(0, 0, 0, 0.300)), url('https://marmitexdesucesso.com.br/wp-content/uploads/2024/09/tipos-de-salgados-para-lanchonete-1.jpg');
+    background-size: cover;      /* Faz a imagem preencher todo o botão */
+    background-position: center; /* Centraliza a imagem */
+    background-repeat: no-repeat;
+}
+
+.btn-porc {
+    /* Propriedades da Imagem */
+    background: linear-gradient(rgba(0, 0, 0, 0.300), rgba(0, 0, 0, 0.300)), url('https://www.receiteria.com.br/wp-content/uploads/receitas-de-salgados-para-festa.jpg');
+    background-size: cover;      /* Faz a imagem preencher todo o botão */
+    background-position: center; /* Centraliza a imagem */
+    background-repeat: no-repeat;
+}
+
+.btn-past {
+    /* Propriedades da Imagem */
+    background: linear-gradient(rgba(0, 0, 0, 0.300), rgba(0, 0, 0, 0.300)), url('https://minhasreceitinhas.com.br/wp-content/uploads/2023/05/Pastel-de-feira-caseiro-1200x692.jpg');
+    background-size: cover;      /* Faz a imagem preencher todo o botão */
+    background-position: center; /* Centraliza a imagem */
+    background-repeat: no-repeat;
+}
+
+.btn-doces {
+    /* Propriedades da Imagem */
+    background: linear-gradient(rgba(0, 0, 0, 0.300), rgba(0, 0, 0, 0.300)), url('https://www.seara.com.br/wp-content/uploads/2025/09/bolodefestacapa.jpg');
+    background-size: cover;      /* Faz a imagem preencher todo o botão */
+    background-position: center; /* Centraliza a imagem */
+    background-repeat: no-repeat;
+}
+
+.section-btn:hover {
+      background-color: #ff593c; /* Muda a cor */    
+}
+
