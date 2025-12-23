@@ -139,8 +139,8 @@ function send(){
   msg+=`\nTelefone: ${telefone.value}`;
   msg+=`\nEndereço: ${endereco.value}`;
   msg+=`\nBairro: ${bairro.options[bairro.selectedIndex].text}`;
-  msg+=`\nPagamento: ${pagamento.value}`;
   if(referencia.value) msg+=`\nReferência: ${referencia.value}`;
+  msg+=`\nPagamento: ${pagamento.value}`;
   msg+=`\nTotal: ${totalSpan.innerText}`;
   if(pagamento.value==="Dinheiro") msg+=`\nTroco para: ${troco.value}`;
 
