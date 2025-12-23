@@ -96,9 +96,10 @@ function render(){
 
     cartItems.innerHTML+=`
       <li class="list-group-item d-flex justify-content-between align-items-center">
-        ${i.name} (${i.qty}x)
+        <strong>${i.name}</strong>
         <div>
         <button class="btn btn-sm btn-danger" onclick="removeItem('${id}')">−</button>
+        <strong class="m-1">${i.qty}</strong>
         <button class="btn btn-sm btn-success" onclick="add('${id}')">+</button>
         </div>
       </li>`;
