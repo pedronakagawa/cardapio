@@ -130,18 +130,18 @@ function send(){
 
   if(!Object.keys(cart).length) return alert("Carrinho vazio");
 
-  let msg="*Pedido - Point R1*\n\n";
+  let msg="*Pedido - Tsunami Hamburgueria*\n\n";
   Object.values(cart).forEach((i,n)=>{
     msg+=`${n+1}. ${i.name} (${i.qty}x)\n`;
   });
 
-  msg+=`\nTotal: ${totalSpan.innerText}`;
-  msg+=`\nPagamento: ${pagamento.value}`;
   msg+=`\nCliente: ${nome.value}`;
   msg+=`\nTelefone: ${telefone.value}`;
   msg+=`\nEndereço: ${endereco.value}`;
   msg+=`\nBairro: ${bairro.options[bairro.selectedIndex].text}`;
+  msg+=`\nPagamento: ${pagamento.value}`;
   if(referencia.value) msg+=`\nReferência: ${referencia.value}`;
+  msg+=`\nTotal: ${totalSpan.innerText}`;
   if(pagamento.value==="Dinheiro") msg+=`\nTroco para: ${troco.value}`;
 
   window.open("https://wa.me/5513997175595?text="+encodeURIComponent(msg),"_blank");
