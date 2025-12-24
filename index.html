@@ -365,36 +365,40 @@ Total: <span class="total" id="total1">R$ 0,00</span>
 
 <ul id="cartItems" class="list-group mb-3"></ul>
 
-<select id="bairro" class="form-select mb-2" onchange="render()">
-<option value="">Selecione o bairro</option>
-<option value="4">Caiubura 1 — R$ 4,00</option>
-<option value="5">Caiubura 2 — R$ 5,00</option>
-<option value="7">Caiubura lado Sabesp — R$ 7,00</option>
-<option value="6">Caruara — R$ 6,00</option>
-<option value="10">Iriri — R$ 10,00</option>
-<option value="10">Sítio São João — R$ 10,00</option>
-<option value="15">Jardim Vicente de Carvalho — R$ 15,00</option>
-<option value="15">Centro — R$ 15,00</option>
-</select>
 
 <form id="orderForm" novalidate>
-<input id="nome" class="form-control mb-2" placeholder="Nome" required>
-<div class="invalid-feedback">Informe seu nome</div>
-<input id="telefone" class="form-control mb-2" placeholder="Telefone" required>
-<div class="invalid-feedback">Informe seu telefone</div>
-<input id="endereco" class="form-control mb-2" placeholder="Endereço" required>
-<div class="invalid-feedback">Informe seu endereço</div>
-<input id="referencia" class="form-control mb-2" placeholder="Ponto de referência (opcional)">
+  <input id="nome" class="form-control mb-2" placeholder="Nome" required>
+  <div class="invalid-feedback">Informe seu nome</div>
+  <input id="telefone" class="form-control mb-2" placeholder="Telefone" required>
+  <div class="invalid-feedback">Informe seu telefone</div>
+  <input id="endereco" class="form-control mb-2" placeholder="Endereço" required>
+  <div class="invalid-feedback">Informe seu endereço</div>
+  
+  <select id="bairro" class="form-select mb-2" onchange="render()" required>
+  <option value="">Selecione o bairro</option>
+  <option value="4">Caiubura 1 — R$ 4,00</option>
+  <option value="5">Caiubura 2 — R$ 5,00</option>
+  <option value="7">Caiubura lado Sabesp — R$ 7,00</option>
+  <option value="6">Caruara — R$ 6,00</option>
+  <option value="10">Iriri — R$ 10,00</option>
+  <option value="10">Sítio São João — R$ 10,00</option>
+  <option value="15">Jardim Vicente de Carvalho — R$ 15,00</option>
+  <option value="15">Centro — R$ 15,00</option>
+</select>
+<div class="invalid-feedback">Informe seu bairro</div>
+  
+  <input id="referencia" class="form-control mb-2" placeholder="Ponto de referência (opcional)">
+  <select id="pagamento" class="form-select mb-2" onchange="toggleTroco()" required>
+  <option value="">Forma de pagamento</option>
+  <option>Pix</option>
+  <option>Cartão</option>
+  <option>Dinheiro</option>
+  </select>
+  
+  <input id="troco" class="form-control mb-2" placeholder="Troco para quanto?" style="display:none" required>
+  <div class="invalid-feedback">Informe forma de pagamento</div>
 </form>
 
-<select id="pagamento" class="form-select mb-2" onchange="toggleTroco()" required>
-<option value="">Forma de pagamento</option>
-<option>Pix</option>
-<option>Cartão</option>
-<option>Dinheiro</option>
-</select>
-
-<input id="troco" class="form-control mb-2" placeholder="Troco para quanto?" style="display:none" required>
 
 <div class="fw-bold fs-5">
 Total: <span id="total2">R$ 0,00</span>
