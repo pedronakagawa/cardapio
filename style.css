@@ -131,3 +131,15 @@ body{
 .section-btn:hover {
       background-color: #ff593c; /* Muda a cor */    
 }
+
+#btn-voltar button{
+  background-color: #fff;
+  border: none;
+  color: rgb(255, 72, 72);
+  text-decoration: underline;
+}
+
+#btn-voltar button:hover {
+  color: rgb(255, 2, 2);
+  font-weight: 500;
+}
