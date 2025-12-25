@@ -166,26 +166,25 @@ function send(){
 
   msg+=`\n--------------------------------`;  
   msg+=`\n*SUBTOTAL:* ${totalCart1.innerText}`;  
-  msg+=`\n--------------------------------`;
+  msg+=`\n--------------------------------\n`;
   
-  msg+=`\n🛵 *Dados para entrega*\n`;  
+  msg+=`\n🛵 *Dados para entrega*\n`;
   msg+=`\n*Nome:* ${nome.value}`;
   msg+=`\n*Endereço:* ${endereco.value}`;
-  //msg+=`\n*Bairro:* ${bairro.options[bairro.selectedIndex].text}`;
   msg+=`\n*Bairro:* ${bairro.options[bairro.selectedIndex].text.split("-")[0].trim()}`;
-  msg+=`\n*Bairro:* `;
+  if(complemento.value) msg+=`\n*Complemento:* ${complemento.value}`;
   if(referencia.value) msg+=`\n*Ponto de Referência:* ${referencia.value}`;
   msg+=`\n*Telefone:* ${telefone.value}\n`;
   
-  msg+=`\n*Taxa de Entrega:* ${pagamento.value}\n`;
+  msg+=`\n*Taxa de Entrega:* ${Number(bairro.value).toLocaleString('pt-br', { style: 'currency', currency: 'BRL' })}\n`;
   
-  msg+=`\n*Tempo de Entrega:* Aprox. ${horarioEntrega}\n`;
+  msg+=`\n🕙 *Tempo de Entrega:* aprox. ${horarioEntrega}\n`;
 
-  msg+=`\n--------------------------------`;  
-  msg+=`\n*TOTAL:* ${totalCart2.innerText}`;  
+  msg+=`\n--------------------------------`;
+  msg+=`\n🧾 *TOTAL:* ${totalCart2.innerText}`;
   msg+=`\n--------------------------------\n`;
   
-  msg+=`\n*PAGAMENTO*\n`;
+  msg+=`\n💳 *PAGAMENTO*\n`;
 
   msg+=`\n*Pagamento:* ${pagamento.value}`;
   if(pagamento.value==="Dinheiro") msg+=`\nTroco para: ${troco.value}`;
