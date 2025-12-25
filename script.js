@@ -121,9 +121,32 @@ function toggleTroco(){
   troco.required = pagamento.value === "Dinheiro";
 }
 
+// Calcular hora da entrega
+function calcularHorarioEntrega(minInicial, minFinal) {
+  const agora = new Date();
+
+  const inicio = new Date(agora.getTime() + minInicial * 60000);
+  const fim = new Date(agora.getTime() + minFinal * 60000);
+
+  const formatar = (data) =>
+    data.toLocaleTimeString("pt-BR", {
+      hour: "2-digit",
+      minute: "2-digit"
+    });
+
+  return `${formatar(inicio)} a ${formatar(fim)}`;
+}
+
+const horarioEntrega = calcularHorarioEntrega(40, 50);
+
+
+
+
+
 function send(){
 
   const form = document.getElementById("orderForm");
+
 
   if(!form.checkValidity()){
     form.classList.add("was-validated");
@@ -135,16 +158,36 @@ function send(){
 
   let msg="*Pedido - Tsunami Hamburgueria*\n\n";
   Object.values(cart).forEach((i,n)=>{
-    msg+=`${n+1}. ${i.name} (${i.qty}x)\n`;
+
+    let precoQty = i.price * i.qty
+
+    msg+=`* ${i.name}: ${i.qty} und. = ${precoQty.toLocaleString('pt-br', { style: 'currency', currency: 'BRL' })}\n`;
   });
 
-  msg+=`\nCliente: ${nome.value}`;
-  msg+=`\nTelefone: ${telefone.value}`;
-  msg+=`\nEndereço: ${endereco.value}`;
-  msg+=`\nBairro: ${bairro.options[bairro.selectedIndex].text}`;
-  if(referencia.value) msg+=`\nReferência: ${referencia.value}`;
-  msg+=`\nPagamento: ${pagamento.value}`;
-  msg+=`\nTotal: ${totalSpan.innerText}`;
+  msg+=`\n--------------------------------`;  
+  msg+=`\n*SUBTOTAL:* ${totalCart1.innerText}`;  
+  msg+=`\n--------------------------------`;
+  
+  msg+=`\n🛵 *Dados para entrega*\n`;  
+  msg+=`\n*Nome:* ${nome.value}`;
+  msg+=`\n*Endereço:* ${endereco.value}`;
+  //msg+=`\n*Bairro:* ${bairro.options[bairro.selectedIndex].text}`;
+  msg+=`\n*Bairro:* ${bairro.options[bairro.selectedIndex].text.split("-")[0].trim()}`;
+  msg+=`\n*Bairro:* `;
+  if(referencia.value) msg+=`\n*Ponto de Referência:* ${referencia.value}`;
+  msg+=`\n*Telefone:* ${telefone.value}\n`;
+  
+  msg+=`\n*Taxa de Entrega:* ${pagamento.value}\n`;
+  
+  msg+=`\n*Tempo de Entrega:* Aprox. ${horarioEntrega}\n`;
+
+  msg+=`\n--------------------------------`;  
+  msg+=`\n*TOTAL:* ${totalCart2.innerText}`;  
+  msg+=`\n--------------------------------\n`;
+  
+  msg+=`\n*PAGAMENTO*\n`;
+
+  msg+=`\n*Pagamento:* ${pagamento.value}`;
   if(pagamento.value==="Dinheiro") msg+=`\nTroco para: ${troco.value}`;
 
   window.open("https://wa.me/5513997175595?text="+encodeURIComponent(msg),"_blank");
