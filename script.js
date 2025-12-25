@@ -1,8 +1,8 @@
 
 const products={
   //Tradicionais
-  "x-burguer":{name:"X Burguer",price:16},
-  "x-salada":{name:"X Salada",price:18},
+  "x-burguer":{name:"X Burguer",price:20},
+  "x-salada":{name:"X Salada",price:25},
   "x-frango":{name:"X Frango",price:17},
   "x-egg":{name:"X Egg",price:18},
   "x-bacon":{name:"X Bacon",price:19},
